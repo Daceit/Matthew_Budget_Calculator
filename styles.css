@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+}
+header {
+    background-color: #99BF87;
+    height: 9vw;
+    width: 100vw;
+    border-bottom: solid 1px black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.icon {
+    width: 8vw;
+}
+
+h1 {
+    font-size: 4.5vw;
+    margin-left: 2.5vw;
+    border-bottom: solid 5px #F4F4F4;
+    padding-right: 20vw;
+}
+
+.Expenses {
+    background-color: #EAEAEA;
+    margin-top: 1vw;
+    margin-left: 1vw;
+    height: 90vh;
+    width: 40vw;
+    border: solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+.eheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid;
+    width: 20rem;
+    margin-left: 11.5vw;
+}
+
+.ExpensesInput {
+    width: 6rem;
+    height: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0px 1.5px;
+}
+
+.Expenses p {
+    /* text-shadow: 0px 1px; */
+    font-size: 2rem;
+}
