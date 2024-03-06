@@ -31,7 +31,7 @@ h1 {
     background-color: #EAEAEA;
     margin-top: 1vw;
     margin-left: 1vw;
-    height: 126vh;
+    height: 121.1vh;
     width: 45%;
     border: solid;
     border-radius: 10px;
@@ -56,16 +56,16 @@ h1 {
 
 .Total {
     border-style: solid;
-    width: 40%;
-    height: 10vw;
+    width: 40vw !important;
+    height: 24vh;
     background-color: #EAEAEA;
     border-radius: 10px;
     position: absolute;
     padding: 15px;
     /* paddn't */
-    top: 137.5%;
+    top: 100%;
     left: 50%;
-    padding-right: 3.4%;
+    padding-right: 4.5%;
     text-decoration: none;
 }
 
@@ -99,7 +99,7 @@ h1 {
 }
 
 .Total {
-    margin-top: 6%;
+    margin-top: 40vh;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -131,4 +131,7 @@ h1 {
 
 .totalText {
     text-decoration: underline;
+}
+main{
+    padding-bottom: 10rem;
 }
