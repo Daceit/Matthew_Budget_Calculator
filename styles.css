@@ -3,7 +3,7 @@ body {
 }
 
 .right {
-    margin-left: -15vw ;
+    margin-left: -15vw !important;
 }
 
 header {
@@ -139,13 +139,14 @@ main{
 #careers {
     /* display:flex; */
     flex-wrap:wrap;
-    overflow: scroll;
+    overflow: auto;
     max-height: 89vh;
     max-width: 100vw;
+    font-size: 2rem;
 }
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 640px) {
     .Expenses {
         background-color: #EAEAEA;
         margin-top: 1vw;
@@ -180,7 +181,7 @@ main{
         margin-top: 6.32vw; 
     }
     .right {
-        
+
         margin-left: -25rem;
     }
     
