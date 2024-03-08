@@ -150,13 +150,13 @@ main{
     .Expenses {
         background-color: #EAEAEA;
         margin-top: 1vw;
-        margin-left: 1vw;
+        margin-left: 22vw;
         height: 121.1vh;
-        width: 26.5rem;
+        width: 45rem;
         border: solid;
         border-radius: 10px;
         display: flex;
-    
+        margin-bottom: 1rem;
         flex-flow: column wrap;
         padding-bottom: 6%;
     }
@@ -171,18 +171,53 @@ main{
     }
     .Career {
         border-style: solid;
-        width: 40%;
+        width: 48rem !important;
         border-radius: 10px;
         background-color: #EAEAEA;
-        padding: 40px;
+        padding: 2rem;
         /* position: absolute; */
-        top: 130%;
-        left: 50%;
+        top: 143%;
+        left: 7.5rem;
         margin-top: 6.32vw; 
+        padding-right: 3.5rem;
+        max-width: 39rem !important;
     }
     .right {
 
-        margin-left: -25rem;
+        margin-left: -25rem !important;
     }
-    
+    .Total {
+        margin-top: 150vh;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        font-size: 36px;
+        width: 43rem !important;
+        left: 22vw !important;
+        margin-bottom: 2rem;
+    }
+    header {
+        background-color: #99BF87;
+        height: 18vw;
+        width: 62rem;
+        border-bottom: solid 1px black;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .icon {
+        width: 16vw;
 } 
+h1 {
+    font-size: 9vw;
+    margin-left: 2.5vw;
+    border-bottom: solid 5px #F4F4F4;
+    padding-right: 20vw;
+}
+.Insurance{
+    margin-left: 3vw !important;
+}
+.eheader {
+    display: none;
+}
+}

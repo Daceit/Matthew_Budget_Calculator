@@ -56,7 +56,7 @@ async function init() {
     let root = document.querySelector('#careers');
 
     //create a variable to hold the URL of the JSON data source
-    let url = 'https://eecu-data-server.vercel.app/data/2024';
+    let url = 'https://api-demo.cartwebapp.com/data/2024';
 
     //create a variable to hold the JSON data
     let occupations = null; 
@@ -133,41 +133,68 @@ document.addEventListener(`DOMContentLoaded`, () => {
     list.set(eventData.target.id,eventData.target.value)
 })
 
+addListener(`Travel`,`change`, (eventData) => {
+    list.set(eventData.target.id,eventData.target.value)
+})
+
+addListener(`Childcare`,`change`, (eventData) => {
+    list.set(eventData.target.id,eventData.target.value)
+})
+
+addListener(`Food`,`change`, (eventData) => {
+    list.set(eventData.target.id,eventData.target.value)
+})
+
+addListener(`Food`,`change`, (eventData) => {
+    list.set(eventData.target.id,eventData.target.value)
+})
+
+addListener(`Food`,`change`, (eventData) => {
+    list.set(eventData.target.id,eventData.target.value)
+})
+
+addListener(`Food`,`change`, (eventData) => {
+    list.set(eventData.target.id,eventData.target.value)
+})
+
 
 
 })
 
-// let income = 0;
 
-// document.addEventListener("DOMContentLoaded", function () {
 
-//     document.getElementById('income').addEventListener('change', function (eventData) {
 
-//         income = document.getElementById('income').value*(1 - document.getElementById('taxes').value/100);
+let income = 0;
 
-//         console.log(income);
-//         console.log(document.getElementById('housing').value !== "")
+document.addEventListener("DOMContentLoaded", function () {
 
-//     })
+    document.getElementById('income').addEventListener('change', function (eventData) {
 
-//     document.getElementById('housing').addEventListener('change', function (eventData) {
+        income = document.getElementById('income').value*(1 - document.getElementById('taxes').value/100);
 
-//         console.log(document.getElementById('housing').value)
+        console.log(income);
+        console.log(document.getElementById('housing').value !== "")
 
-//         if(document.getElementById('housing').value !==""){// already have a value
-//             console.log(income);
+    })
 
-//             income = income - document.getElementById('housing').value;
-//             console.log(Math.round(income*100)/100); //two place aproximamtion
+    document.getElementById('housing').addEventListener('change', function (eventData) {
+
+        console.log(document.getElementById('housing').value)
+
+        if(document.getElementById('housing').value !==""){// already have a value
+            console.log(income);
+
+            income = income - document.getElementById('housing').value;
+            console.log(Math.round(income*100)/100); //two place aproximamtion
     
-//         }
+        }
 
 
-//     })
-
-
-
+    })
 
 
 
-// });
+
+
+
+});
