@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById('income').addEventListener('change', function (eventData) {
 
-        income = document.getElementById('income').value * (1 - document.getElementById('taxes').value / 100);
+        income = Math.round(document.getElementById('income').value * (1 - document.getElementById('taxes').value / 100));
 
         console.log(income);
         console.log(document.getElementById('housing').value !== "")
@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(arrayInputs);
     for (input of arrayInputs) {
         input.addEventListener('change', function () {
-            document.getElementById("Total").value = income;
+            document.getElementById("Total").value = Math.round(income);
         })
 
     }
