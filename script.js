@@ -1,6 +1,6 @@
 let list = new Map();
 
-list.set(`taxes`,32.65)
+list.set(`taxes`, 32.65)
 
 let utils = {}; //create a namespace for our utility functions
 
@@ -59,15 +59,15 @@ async function init() {
     let url = 'https://api-demo.cartwebapp.com/data/2024';
 
     //create a variable to hold the JSON data
-    let occupations = null; 
-    
+    let occupations = null;
+
     //try to retrieve the JSON data from the server
     try {
         //retrieve the JSON data from the server
         occupations = await utils.getJSON(url);
     }
     //catch any errors and display them in the root element
-    catch(error){
+    catch (error) {
         root.style.color = 'red';
         root.textContent = `error: ${error}`;
     }
@@ -111,51 +111,51 @@ document.addEventListener('DOMContentLoaded', init);
 
 document.addEventListener(`DOMContentLoaded`, () => {
 
-    let elementById = function(id) {return document.getElementById(id)}
+    let elementById = function (id) { return document.getElementById(id) }
 
-    let addListener = function(id,event,code) {elementById(id).addEventListener(event, (eventData) => {code(eventData)})}
+    let addListener = function (id, event, code) { elementById(id).addEventListener(event, (eventData) => { code(eventData) }) }
 
 
 
-    addListener(`income`,`change`, (eventData) => {
-         list.set(eventData.target.id,eventData.target.value)
+    addListener(`income`, `change`, (eventData) => {
+        list.set(eventData.target.id, eventData.target.value)
     })
 
-    addListener(`taxes`,`change`, (eventData) => {
-        list.set(eventData.target.id,eventData.target.value)
-   })
+    addListener(`taxes`, `change`, (eventData) => {
+        list.set(eventData.target.id, eventData.target.value)
+    })
 
-    addListener(`housing`,`change`, (eventData) => {
-        list.set(eventData.target.id,eventData.target.value)
-   })
+    addListener(`housing`, `change`, (eventData) => {
+        list.set(eventData.target.id, eventData.target.value)
+    })
 
-   addListener(`Food`,`change`, (eventData) => {
-    list.set(eventData.target.id,eventData.target.value)
-})
+    addListener(`Food`, `change`, (eventData) => {
+        list.set(eventData.target.id, eventData.target.value)
+    })
 
-addListener(`Travel`,`change`, (eventData) => {
-    list.set(eventData.target.id,eventData.target.value)
-})
+    addListener(`Travel`, `change`, (eventData) => {
+        list.set(eventData.target.id, eventData.target.value)
+    })
 
-addListener(`Childcare`,`change`, (eventData) => {
-    list.set(eventData.target.id,eventData.target.value)
-})
+    addListener(`Childcare`, `change`, (eventData) => {
+        list.set(eventData.target.id, eventData.target.value)
+    })
 
-addListener(`Food`,`change`, (eventData) => {
-    list.set(eventData.target.id,eventData.target.value)
-})
+    addListener(`Food`, `change`, (eventData) => {
+        list.set(eventData.target.id, eventData.target.value)
+    })
 
-addListener(`Food`,`change`, (eventData) => {
-    list.set(eventData.target.id,eventData.target.value)
-})
+    addListener(`Food`, `change`, (eventData) => {
+        list.set(eventData.target.id, eventData.target.value)
+    })
 
-addListener(`Food`,`change`, (eventData) => {
-    list.set(eventData.target.id,eventData.target.value)
-})
+    addListener(`Food`, `change`, (eventData) => {
+        list.set(eventData.target.id, eventData.target.value)
+    })
 
-addListener(`Food`,`change`, (eventData) => {
-    list.set(eventData.target.id,eventData.target.value)
-})
+    addListener(`Food`, `change`, (eventData) => {
+        list.set(eventData.target.id, eventData.target.value)
+    })
 
 
 
@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById('income').addEventListener('change', function (eventData) {
 
-        income = document.getElementById('income').value*(1 - document.getElementById('taxes').value/100);
+        income = document.getElementById('income').value * (1 - document.getElementById('taxes').value / 100);
 
         console.log(income);
         console.log(document.getElementById('housing').value !== "")
@@ -181,20 +181,139 @@ document.addEventListener("DOMContentLoaded", function () {
 
         console.log(document.getElementById('housing').value)
 
-        if(document.getElementById('housing').value !==""){// already have a value
+        if (document.getElementById('housing').value !== "") {// already have a value
             console.log(income);
 
             income = income - document.getElementById('housing').value;
-            console.log(Math.round(income*100)/100); //two place aproximamtion
-    
+            console.log(Math.round(income * 100) / 100); //two place aproximamtion
+
         }
 
+    })
+    document.getElementById('Food').addEventListener('change', function (eventData) {
+
+        console.log(document.getElementById('Food').value)
+
+        if (document.getElementById('Food').value !== "") {// already have a value
+            console.log(income);
+
+            income = income - document.getElementById('Food').value;
+            console.log(Math.round(income * 100) / 100); //two place aproximamtion
+
+        }
+
+    })
+    document.getElementById('Travel').addEventListener('change', function (eventData) {
+
+        console.log(document.getElementById('Travel').value)
+
+        if (document.getElementById('Travel').value !== "") {// already have a value
+            console.log(income);
+
+            income = income - document.getElementById('Travel').value;
+            console.log(Math.round(income * 100) / 100); //two place aproximamtion
+
+        }
+
+    })
+    document.getElementById('Childcare').addEventListener('change', function (eventData) {
+
+        console.log(document.getElementById('Childcare').value)
+
+        if (document.getElementById('Childcare').value !== "") {// already have a value
+            console.log(income);
+
+            income = income - document.getElementById('Childcare').value;
+            console.log(Math.round(income * 100) / 100); //two place aproximamtion
+
+        }
+
+    })
+    document.getElementById('Medical').addEventListener('change', function (eventData) {
+
+        console.log(document.getElementById('Medical').value)
+
+        if (document.getElementById('Medical').value !== "") {// already have a value
+            console.log(income);
+
+            income = income - document.getElementById('Medical').value;
+            console.log(Math.round(income * 100) / 100); //two place aproximamtion
+
+        }
+
+    })
+    document.getElementById('Insurance').addEventListener('change', function (eventData) {
+
+        console.log(document.getElementById('Insurance').value)
+
+        if (document.getElementById('Insurance').value !== "") {// already have a value
+            console.log(income);
+
+            income = income - document.getElementById('Insurance').value;
+            console.log(Math.round(income * 100) / 100); //two place aproximamtion
+
+        }
+
+    })
+    document.getElementById('Media').addEventListener('change', function (eventData) {
+
+        console.log(document.getElementById('Media').value)
+
+        if (document.getElementById('Media').value !== "") {// already have a value
+            console.log(income);
+
+            income = income - document.getElementById('Media').value;
+            console.log(Math.round(income * 100) / 100); //two place aproximamtion
+
+        }
+
+    })
+    document.getElementById('Debt').addEventListener('change', function (eventData) {
+
+        console.log(document.getElementById('Debt').value)
+
+        if (document.getElementById('Debt').value !== "") {// already have a value
+            console.log(income);
+
+            income = income - document.getElementById('Debt').value;
+            console.log(Math.round(income * 100) / 100); //two place aproximamtion
+
+        }
+
+    })
+    document.getElementById('Savings').addEventListener('change', function (eventData) {
+
+        console.log(document.getElementById('Savings').value)
+
+        if (document.getElementById('Savings').value !== "") {// already have a value
+            console.log(income);
+
+            income = income - document.getElementById('Savings').value;
+            console.log(Math.round(income * 100) / 100); //two place aproximamtion
+
+        }
+
+    })
+    document.getElementById('Other').addEventListener('change', function (eventData) {
+
+        console.log(document.getElementById('Other').value)
+
+        if (document.getElementById('Other').value !== "") {// already have a value
+            console.log(income);
+
+            income = income - document.getElementById('Other').value;
+            console.log(Math.round(income * 100) / 100); //two place aproximamtion
+
+        }
 
     })
 
+    let arrayInputs = document.querySelectorAll(".ExpensesInput");
+    console.log(arrayInputs);
+    for (input of arrayInputs) {
+        input.addEventListener('change', function () {
+            document.getElementById("Total").value = income;
+        })
 
-
-
-
-
+    }
 });
